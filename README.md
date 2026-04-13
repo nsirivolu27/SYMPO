@@ -39,8 +39,6 @@ npm install
 npm run dev
 ```
 
-## Resume Alignment
-
 This project showcases:
 
 - Spring Boot and Spring Data JPA
