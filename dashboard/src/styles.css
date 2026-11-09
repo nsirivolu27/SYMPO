@@ -1,0 +1,173 @@
+:root {
+  color-scheme: light;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 180, 92, 0.45), transparent 28%),
+    radial-gradient(circle at top right, rgba(79, 172, 254, 0.35), transparent 25%),
+    linear-gradient(180deg, #fff8f0 0%, #eef6ff 100%);
+  color: #172033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #cb5e28;
+  font-size: 0.78rem;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 0.95;
+}
+
+.lede {
+  max-width: 640px;
+  font-size: 1.08rem;
+}
+
+.hero-card,
+.panel,
+.card,
+.activity-item {
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  box-shadow: 0 18px 45px rgba(29, 52, 84, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+}
+
+.hero-card {
+  min-width: 240px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-card strong {
+  font-size: 3rem;
+  margin: 8px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  padding: 20px;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.panel-header h2 {
+  margin: 0;
+}
+
+.list,
+.activity {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  padding: 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.action-card {
+  text-align: left;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 50px rgba(29, 52, 84, 0.12);
+}
+
+.table {
+  display: grid;
+  gap: 10px;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1.3fr 0.5fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.table-head {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5c6980;
+}
+
+.table-row {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(245, 249, 255, 0.9);
+}
+
+.activity-item {
+  padding: 14px 16px;
+}
+
+.empty {
+  color: #5c6980;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 18px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide {
+    grid-column: span 1;
+  }
+}

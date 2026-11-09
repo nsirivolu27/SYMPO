@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  matching-engine:
+    build: ./matching-engine
+    ports:
+      - "8081:8081"
+
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "5173:5173"
+    depends_on:
+      - matching-engine
